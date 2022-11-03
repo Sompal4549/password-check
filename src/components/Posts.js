@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-
 function Posts() {
   const [posts, setPosts] = React.useState([]);
 
