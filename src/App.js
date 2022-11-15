@@ -7,6 +7,8 @@ import { Game } from "./components/TicTacToe";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import example from "./components/ReactHooks";
+
+import InfiniteScroller from "./components/InfiniteScroll";
 function App() {
   return (
     <div className="App">
@@ -72,6 +74,7 @@ function App() {
         <Game />
         <PasswordCheckList></PasswordCheckList>
         <PasswordCheck />
+        <InfiniteScroller/>
       </header>
       <Posts />
       {example}
