@@ -9,9 +9,65 @@ import Input from "./components/Input";
 import example from "./components/ReactHooks";
 
 import InfiniteScroller from "./components/InfiniteScroll";
+import Slider from "./components/Slider/Slider";
+import Accordion from "./components/accordion/Accordion";
+import FilterContainer from "./components/Filter/FilterContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+import Layout from "./pages/Layout";
+import Gallery from "./pages/Gallery";
+import RenderPosts from "./components/LearnFetch.js/RenderPosts";
+import OtherPage from "./pages/OtherPage";
+import Effect from "./pages/Effect";
+import Page from "./pages/SectionApp";
 function App() {
+  // Class function example for
+
+  class Car {
+    constructor(name, year) {
+      this.year = year;
+      this.name = name;
+    }
+  }
+  // creating Object with class
+  const CarObject = new Car("nano", "2012");
+  const typeCarObject = typeof CarObject;
+  const typeCar = typeof Car;
+
   return (
     <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="*" element={<NoPage />} />
+            <Route path="/other-page" element={<OtherPage />} />
+            <Route path="/effect" element={<Effect />}></Route>
+            <Route path="/section-app" element={<Page />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <FilterContainer />
+      The example above creates a class named "Car". The class has two initial
+      properties: "name" and "year". A JavaScript calss is not an object. It is
+      a template for JavaScript Objects. Using A Class When you have a class,
+      you can use the class to create objects. car is a class function and class
+      is not object class is a template of an object
+      <p>{CarObject.name}</p>
+      <p>{CarObject.year}</p>
+      <p>{typeCarObject}</p>
+      <p>{typeCar}</p>
+      EcmaScript 2015 also known as es6, introduced JavaScript classes are
+      templates for Javascript objects JavaScript Class Syntax Use the keyword
+      class to create a class. Always add a method named constructor():
+      <Slider />
+      <Accordion />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h1>React Posts Sharer</h1>
@@ -74,7 +130,7 @@ function App() {
         <Game />
         <PasswordCheckList></PasswordCheckList>
         <PasswordCheck />
-        <InfiniteScroller/>
+        <InfiniteScroller />
       </header>
       <Posts />
       {example}
