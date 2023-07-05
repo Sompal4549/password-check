@@ -1,13 +1,12 @@
 import React, { createContext } from "react";
 import Car from "../components/state/CreatingState";
 import ChangingStateObject from "../components/state/ChangingStateObject";
-import { useState, useContext } from "react";
+import { useState } from "react";
 
 import Monting from "../components/LifeCycle/Mounting";
 import Accordion from "../components/accordion/Accordion";
 import UseState from "../components/state/UseState"
 import { Tb123 } from "react-icons/tb";
-import UseContext from "../components/state/LearnContext";
 import LearnContext from "../components/state/LearnContext";
 import Form from "../components/forms/Form";
 const Home = () => {
